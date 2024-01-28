@@ -47,15 +47,12 @@ class Server:
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """
-        This function receives two integer parameters and retrieves   the specified page from the dataset.
-
-Parameters:
-
-page (int): The desired page number; it must be a positive integer.
-page_size (int): The number of records per page; it must be a positive integer.
-Return:
-
-A list of lists containing the requested data from the dataset.
+        Takes 2 integer arguments and returns requested page from the dataset
+        Args:
+            page (int): required page number. must be a positive integer
+            page_size (int): number of records per page. must be a +ve integer
+        Return:
+            list of lists containing required data from the dataset
         """
         assert type(page) is int and page > 0
         assert type(page_size) is int and page_size > 0
